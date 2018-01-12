@@ -1,17 +1,17 @@
 import React from 'react';
 
-import product1 from "../../../images/home/product1.jpg";
-import product2 from "../../../images/home/product2.jpg";
-import product3 from "../../../images/home/product3.jpg";
-import product4 from "../../../images/home/product4.jpg";
-import product5 from "../../../images/home/product5.jpg";
-import product6 from "../../../images/home/product6.jpg";
-import new_ from "../../../images/home/new.png";
-import sale from "../../../images/home/sale.png";
-import gallery1 from "../../../images/home/gallery1.jpg";
-import gallery2 from "../../../images/home/gallery2.jpg";
-import gallery3 from "../../../images/home/gallery3.jpg";
-import gallery4 from "../../../images/home/gallery4.jpg";
+import product1 from "../../../../images/home/product1.jpg";
+import product2 from "../../../../images/home/product2.jpg";
+import product3 from "../../../../images/home/product3.jpg";
+import product4 from "../../../../images/home/product4.jpg";
+import product5 from "../../../../images/home/product5.jpg";
+import product6 from "../../../../images/home/product6.jpg";
+import new_ from "../../../../images/home/new.png";
+import sale from "../../../../images/home/sale.png";
+import gallery1 from "../../../../images/home/gallery1.jpg";
+import gallery2 from "../../../../images/home/gallery2.jpg";
+import gallery3 from "../../../../images/home/gallery3.jpg";
+import gallery4 from "../../../../images/home/gallery4.jpg";
 
 export default class FeatureItems extends React.Component {
   render(){

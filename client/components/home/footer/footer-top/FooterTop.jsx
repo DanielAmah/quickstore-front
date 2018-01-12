@@ -1,10 +1,10 @@
 import React from 'react';
 
-import frame1 from "../../../images/home/iframe1.png";
-import frame2 from "../../../images/home/iframe2.png";
-import frame3 from "../../../images/home/iframe3.png";
-import frame4 from "../../../images/home/iframe4.png";
-import map from "../../../images/home/map.png";
+import frame1 from "../../../../images/home/iframe1.png";
+import frame2 from "../../../../images/home/iframe2.png";
+import frame3 from "../../../../images/home/iframe3.png";
+import frame4 from "../../../../images/home/iframe4.png";
+import map from "../../../../images/home/map.png";
 
 export default class FooterTop extends React.Component {
   render() {

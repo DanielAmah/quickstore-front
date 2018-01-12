@@ -1,6 +1,6 @@
 import React from 'react';
 
-import shipping from "../../../images/home/shipping.jpg";
+import shipping from "../../../../images/home/shipping.jpg";
 
 export default class SideAds extends React.Component {
   render(){

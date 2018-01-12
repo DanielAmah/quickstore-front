@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../images/home/logo.png';
+import logo from '../../../images/home/logo.png';
+import { Link } from 'react-router-dom';
 
 export default class Header extends React.Component {
   render() {
@@ -36,7 +37,7 @@ export default class Header extends React.Component {
           <div className="row">
             <div className="col-sm-4">
               <div className="logo pull-left">
-                <a href="index.html"><img src={logo} alt="" /></a>
+                <Link to= "/"><img src={logo} alt="" /></Link>
               </div>
               <div className="btn-group pull-right">
                 <div className="btn-group">
@@ -69,7 +70,7 @@ export default class Header extends React.Component {
                   <li><a href="#"><i className="fa fa-star"></i> Wishlist</a></li>
                   <li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
                   <li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
-                  <li><a href="login.html"><i className="fa fa-lock"></i> Login</a></li>
+                  <li><Link to="/login"><i className="fa fa-lock"></i>Login</Link></li>
                 </ul>
               </div>
             </div>
@@ -91,14 +92,14 @@ export default class Header extends React.Component {
               </div>
               <div className="mainmenu pull-left">
                 <ul className="nav navbar-nav collapse navbar-collapse">
-                  <li><a href="index.html" className="active">Home</a></li>
+                  <li><Link to= "/" className="active">Home</Link></li>
                   <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
                                       <ul role="menu" className="sub-menu">
                                           <li><a href="shop.html">Products</a></li>
                       <li><a href="product-details.html">Product Details</a></li> 
                       <li><a href="checkout.html">Checkout</a></li> 
                       <li><a href="cart.html">Cart</a></li> 
-                      <li><a href="login.html">Login</a></li> 
+                      <li><Link to="/login">Login</Link></li> 
                                       </ul>
                                   </li> 
                   <li className="dropdown"><a href="#">Blog<i className="fa fa-angle-down"></i></a>

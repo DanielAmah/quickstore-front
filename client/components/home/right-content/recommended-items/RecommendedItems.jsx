@@ -1,8 +1,8 @@
 import React from 'react';
 
-import recommend1 from "../../../images/home/recommend1.jpg";
-import recommend2 from "../../../images/home/recommend2.jpg";
-import recommend3 from "../../../images/home/recommend3.jpg";
+import recommend1 from "../../../../images/home/recommend1.jpg";
+import recommend2 from "../../../../images/home/recommend2.jpg";
+import recommend3 from "../../../../images/home/recommend3.jpg";
 
 export default class RecommendedItems extends React.Component {
   render() {

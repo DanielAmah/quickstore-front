@@ -1,9 +1,9 @@
 import React from 'react';
 
-import girl from '../../images/home/girl1.jpg';
-import girl2 from '../../images/home/girl2.jpg';
-import girl3 from '../../images/home/girl3.jpg';
-import pricing from '../../images/home/pricing.png';
+import girl from '../../../images/home/girl1.jpg';
+import girl2 from '../../../images/home/girl2.jpg';
+import girl3 from '../../../images/home/girl3.jpg';
+import pricing from '../../../images/home/pricing.png';
 
 export default class Slider extends React.Component {
   render(){

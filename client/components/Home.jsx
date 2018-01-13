@@ -9,8 +9,7 @@ import '../css/price-range.css';
 import '../css/animate.css';
 import '../css/main.css';
 import '../css/responsive.css';
-require('../js/price-range.js');
-require('../js/main.js');
+
 
 export default class App extends React.Component {
   render() {

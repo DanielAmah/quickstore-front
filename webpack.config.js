@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack'); 
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -7,16 +8,17 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
-module.exports = {
+config = {
   entry: './client/index.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.js$/, loader: 'babel-loader'},
+      { test: /\.jsx$/, loader: 'babel-loader'},
       { test: /\.css$/, loader: "style-loader!css-loader" },
       {test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader?name=client/fonts/[name].[ext]'},
@@ -26,5 +28,23 @@ module.exports = {
        }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
-}
+  devServer: {
+    historyApiFallback: true,
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({ 'process.env':{ 'NODE_ENV': JSON.stringify('production') } }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false },
+      output: {comments: false },
+      mangle: false,
+      sourcemap: false,
+      minimize: true,
+      mangle: { except: ['$super', '$', 'exports', 'require', '$q', '$ocLazyLoad'] }
+    }),
+    HtmlWebpackPluginConfig
+  ]
+};
+
+module.exports = config;

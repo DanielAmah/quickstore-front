@@ -34,15 +34,15 @@ config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({ 'process.env':{ 'NODE_ENV': JSON.stringify('production') } }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      output: {comments: false },
-      mangle: false,
-      sourcemap: false,
-      minimize: true,
-      mangle: { except: ['$super', '$', 'exports', 'require', '$q', '$ocLazyLoad'] }
-    }),
+    new webpack.DefinePlugin({ 'process.env':{ 'NODE_ENV': JSON.stringify('development') } }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: { warnings: false },
+    //   output: {comments: false },
+    //   mangle: false,
+    //   sourcemap: false,
+    //   // minimize: true,
+    //   mangle: { except: ['$super', '$', 'exports', 'require', '$q', '$ocLazyLoad'] }
+    // }),
     HtmlWebpackPluginConfig
   ]
 };

@@ -6,52 +6,57 @@ import logo from '../../../images/home/logo.png';
 import {signOutAction} from '../../../actions/signOutAction';
 
 class Header extends React.Component {
+
   signout=(event)=>{
     event.preventDefault();
     this.props.signOutAction();
   }
   navbarLinks() {
     if (this.props.authenticated) {
-      return [
-        <li><a href="#"><i className="fa fa-user"></i> Account</a></li>,
-        <li><a href="#"><i className="fa fa-star"></i> Wishlist</a></li>,
-        <li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>,
-        <li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>,
+      return (
+        <div>
+        <li><a href="#"><i className="fa fa-user"></i> Account</a></li>
+        <li><a href="#"><i className="fa fa-star"></i> Wishlist</a></li>
+        <li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
+        <li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
         <li>
         <a 
         onClick={this.signout}
         href="/">
         <i className="fa fa-lock"></i>Signout</a></li>
-      ];
+        </div>
+      );
     }
-    return [
-      <li><a href="#"><i className="fa fa-user"></i> Account</a></li>,
+    return (
+      <div>
+      <li><a href="#"><i className="fa fa-user"></i> Account</a></li>
       <li><Link to="/auth"><i className="fa fa-lock"></i>Login/Register</Link></li>
-    ];
+      </div>
+    );
   }
 
   dropdownLinks() {
     if (this.props.authenticated) {
-      return [
+      return (
       <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
       <ul role="menu" className="sub-menu">
       <li><a href="shop.html">Products</a></li>,
-      <li><a href="product-details.html">Product Details</a></li>,
-      <li><a href="checkout.html">Checkout</a></li>,
-      <li><a href="cart.html">Cart</a></li>,
+      <li><a href="product-details.html">Product Details</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="cart.html">Cart</a></li>
       <li><Link to="/signout">Signout</Link></li> 
       </ul>
       </li> 
-      ];
+      );
     }
-    return [
+    return (
       <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
       <ul role="menu" className="sub-menu">
-      <li><a href="shop.html">Products</a></li>,
+      <li><a href="shop.html">Products</a></li>
       <li><Link to="/auth">Login/Register</Link></li> 
       </ul>
       </li> 
-    ];
+    );
   }
 
 

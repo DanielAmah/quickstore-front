@@ -25,7 +25,6 @@ class Register extends React.Component {
   }
   componentWillReceiveProps(nextProps){
     if(nextProps.registered){
-      console.log(nextProps,'+++');
       this.setState({
         registered:true,
         formCompleted:true,

@@ -5,6 +5,7 @@ import reduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { AUTHENTICATED } from './actions/authAction';
+import {loadCategories} from './actions/categoriesAction';
 
 import Auth from './components/auth/Auth.jsx';
 import Secret from './components/Secret.jsx';
@@ -22,6 +23,7 @@ const user = localStorage.getItem('user');
 
 if(user) {
   store.dispatch({ type: AUTHENTICATED });
+  store.dispatch(loadCategories())
 }
 
 ReactDOM.render(

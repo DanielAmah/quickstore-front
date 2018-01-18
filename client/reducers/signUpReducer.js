@@ -14,7 +14,6 @@ export default function(state={
         error: {} 
       };
     case SIGNUP_FAILURE:
-    console.log('here',action);
       return { 
         ...state, 
         registered: false, 
